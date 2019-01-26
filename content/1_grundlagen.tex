@@ -1,0 +1,73 @@
+\section{Grundlagen}\label{sec:gdl}
+Im folgenden Kapitel sollen einige theoretische Grundlagen geschaffen werden, die als Rahmenbedingungen zum Verständnis der weiteren Arbeit benötigt werden. Zunächst soll die Augmented Reality Technologie kurz erklärt und anschließend die für die Ausarbeitung wichtigsten Informationen über die Funktion des Gedächtnisses gegeben werden.
+
+\subsection{Augmented Reality}
+Die am meisten zitierte Definition für Augmented Reality, oder Erweiterte Realität, stammt von Ronald T. Azuma aus dem Artikel \textit{A Survey of Augmented Reality}. Sie definiert den Begriff über drei grundsätzliche Aussagen:
+\begin{itemize}
+    \item In der Augmented Reality wird die Realität und die virtuelle Realität miteinander kombiniert und zum Teil überlagert.\\
+    \item Die Interaktivität in der Augmented Reality findet in Echtzeit statt.\\
+    \item Es besteht ein 3-Dimensionaler Bezug zwischen Realen und Virtuellen Objekten. Somit sind 2 Dimensionale Einblendungen ins Sichtfeld, wie Head-up-Displays keine Augmented Reality.\\
+\end{itemize}
+
+Diese Grundsätze zur Definition von Augmented Reality von Azuma lässt im Gegensatz zu alternativen Definitionen auch Anwendungen ohne ein Head-Mounted-Display zu. \cite{RonaldT.Azuma.1997} 
+
+Um dieses Vorhaben der Augmented Reality umzusetzen werden unterschiedliche Komponenten benötigt. Zunächst werden als Hardware mehrere Kameras und Sensoren zur Aufnahme und Rekonstruktion der 3-Dimensionalen Umgebung eingesetzt. Weiter wird eine Tracking-Software und ein sogenannter Renderer genutzt um eine Anzeige und ordnungsgemäße Überlagerung von Gegenständen zu ermöglichen und die gewünschten Funktionen auszuführen. Um dem Nutzer die neu geschaffene, erweiterte Realität zu präsentieren, ist letztendlich noch ein Anzeigegerät, wie ein Head-mounted-Display oder ein Monitor, erforderlich. Siehe Abbildung \ref{fig:AR_Komp}. \cite[S. 45f]{Schart.2017}
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{content/GrafikAR.png}
+\centering
+\caption{Komponenten von Augmented Reality. In Anlehnung an \protect \cite{Schilling.2008}}
+\label{fig:AR_Komp}
+\end{figure}
+
+Die genau Erfassung, Aufbereitung und Präsentation der Sensordaten ist für eine gute User-Experience in der AR von hoher Bedeutung. Für das sogenannten Tracking werden zum heutigen Zeitpunkt unterschiedliche Technologien eingesetzt. Es wird unterschieden in visuelles und optisches Tracking. Das optische Tracking erfolgt mit Hilfe von Licht und Infrarot. Die Informationen werden über mehrere Kameras aufgenommen und sind heutzutage das gebräuchlichste Mittel zur Analyse der Umgebung. Visuelles Tracking hingegen erfolgt über sogenannte Marker. Diese künstlichen Symbole werden in der realen Welt angebracht und dienen als Orientierungspunkt für die Bilderkennungsmethoden, die den gelieferten Videostream analysieren. \cite[S.47f]{Schart.2017}
+
+Eine Erweiterung dieser Tracking Verfahren, die zum Beispiel bei der Microsoft HoloLens zum Einsatz kommt, ist das sogenannte SLAM-Tracking. Das Akronym SLAM steht für \textit{Simultaneous Localization and Mapping}. Es basiert auf einer Karte, die entweder fest vorgegeben oder durch die zuvor beschriebenen Tracking-Methoden zunächst erstellt wird. Anhand dieser Karte und der relativen Position zu den erfassten Objekten, kann eine Position des Geräts und somit die Position des Anwenders ermittelt werden. \cite[S.49]{Schart.2017}
+
+Probleme, welche das Tracking und die Lokalisierung für die Augmented Reality derzeit noch erschweren, sind vor Allem äußere Einflüsse. Herumlaufende Menschen und sich bewegende Gegenstände, sowie sich stark ändernde Lichtverhältnisse, führen häufig zu Problemen. Aufgrund dessen ist ein Einsatz meist nur in geschlossenen Räumen möglich. Die Sonneneinstrahlung im Freien und zu viele sich bewegende Objekte stören das Tracking und führen zu schlechten Ergebnissen.+
+
+Die in dieser Ausarbeitung verwendete AR-Technologie war das HMD Hololens von Microsoft. Diese verfügt über zwei HD Light-Engines, die für die Hologramme in den See-Through-Lenses zuständig sind und besitzt 2.3M total light points. Die Hololens verfügt über eine geringe Latenz und hat ein Sichtfeld von 35 Grad. Das Betriebssystem basiert auf Windows 10 und ist über Netzwerk mit einem externen Device verknüpfbar. So ist es theoretisch möglich dem Probanden bei der Versuchsdurchführung zuzusehen. \cite{Microsoft.2018}
+
+
+\subsection{Funktionsweise des menschlichen Gedächtnisses} \label{sec:gedaechtnis}
+Zum Verständnis der Ausarbeitung und des Versuchsaufbaus sind ebenfalls einige Grundlagen im Bezug auf die Funktionsweise des menschlichen Gedächtnisses notwendig. Da das menschliche Gehirn, Erinnerungen und das Gedächtnis noch bei weitem nicht vollständig erforscht wurde, wird von den bisher bekannten Annahmen ausgegangen. Diese sollen folgend zusammengefasst werden, um eine gemeinsame Grundlage zu schaffen. 
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{content/Gedaechtnis_Arten.png}
+\centering
+\caption{Gedächtnisarten nach Bäumler 1974}
+\label{fig:gd_arten}
+\end{figure}
+
+Es existiert der Ansatz, dass das menschliche Gedächtnis in mehrere differenzierte Bereiche eingeteilt werden kann. Dieser Erklärungsversuch wird auch als \textit{Mehrfach-Speicher-Theorie des Gedächtnisses} bezeichnet. Günther Bäumler \citeN{Baumler.1974}, einer maßgeblichen Autoren des \textit{Lern-und-Gedächtnistest LGT-3} auf den in Kapitel \ref{lgt} genauer eingegangen wird, benennt hierbei vier Unterteilungen des Gedächtnisses. Diese sind in Abbildung \ref{fig:gd_arten} zu sehen. Folgend werden die einzelnen Bereiche kurz erläutert.
+
+\subsubsection{ikonisches Gedächtnis}
+Das \textit{ikonische Gedächtnis} ist auch als \textit{Ultrakurzzeitgedächtnis} oder \textit{Sensorisches Gedächtnis} bekannt. Es wird häufig als Nachflackern bezeichnet. In diesem Abschnitt werden Informationen nur wenige Hundertstel-Sekunden gespeichert bis zu maximal 1 oder 2 Sekunden. Es dient nur der kurzen Verarbeitung von Information. Ein Chemischer Vorgang findet hierbei nicht statt, sondern es wird rein über elektrische Impulse realisiert.
+
+\subsubsection{Präsenzgedächtnis}
+Als nächste Instanz wird das \textit{Präsenzgedächtnis} genannt. Das auch als \textit{Kurzzeitgedächtnis} bezeichnete Arbeitsgedächtnis, dient zum Behalten von Informationen von 1 bis zu 30 Sekunden. Es dient zum Beispiel dem Verständnis von langen Sätzen, Merken von Telefonnummer und ist dem \textit{RAM} eines Computers am ähnlichsten. Die Halbwertszeit des Gedächtnisses wurde auf ungefähr 20 Sekunden bestimmt.
+
+\subsubsection{intermediäres Gedächtnis}
+Werden Informationen nach 1 Minute bis zu mehreren Stunden Abgerufen, weißt dies auf den Zugriff auf das \textit{intermediäre Gedächtnis} hin. Dieses wird auch als \textit{mittelfristiges} oder \textit{Alltags Gedächtnis} bezeichnet. Es befindet sich zwischen dem Kurzzeitgedächtnis und dem Langzeitgedächtnis und bezeichnet den Weg vom Arbeitsgedächtnis hin zum längerfristigen Wissen. Es wird deshalb auch als Alltagsgedächtnis bezeichnet.
+
+\subsubsection{Permanenz Gedächtnis}
+Das \textit{Permanenz Gedächtnis} ist schwer genau vom intermediären Gedächtnis zu trennen. Die untere Grenze in der Literatur variiert häufig. Bäumler legt sich hierbei aber auf eine untere Grenze von 6 Stunden fest und auf eine obere Grenze von mehreren Monaten bis Jahrzehnten. Das intermediäre Gedächtnis und das Permanenz Gedächtnis werden in anderen Unterteilungen häufig zusammengefasst als \textit{Langzeitgedächtnis} \cite[S. 2]{Gruber.2018}. In das Permanenz Gedächtnis werden nur Informationen aufgenommen, die für besonders wichtig erachtet werden und durch Wiederholung trainiert werden.
+
+\subsubsection{Vergessenskurve}
+Eine weitere Theorie, die das Zusammenspiel der Gedächtnisarten und die Funktionsweise der Informationsspeicherung im Gehirn verdeutlicht, ist die \textit{Kurve des Vergessens} nach Prof. Dr. Herrmann Ebbinghaus \citeN{Ebbinghaus.1885}. Er untersuchte, wie lange sinnlose Silben im Gedächtnis abrufbar sind, nachdem Sie zu 100 Prozent auswendig gelernt hatte und reproduzieren konnte. Aus diesem Versuch ergab sich die in Abbildung \ref{fig:vgkurve} zu sehende Kurve. Diese wird bis zum heutigen Zeitpunkt noch als gültig betrachtet. Wie in der Abbildung zu erkennen ist, ist in der ersten Stunde der größte Gedächtnisverlust zu verzeichnen. \cite[S. 3]{Gruber.2018}
+
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{content/Vergessenkurve.png}
+\centering
+\caption{Kurve des Vergessens nach \protect \cite{Ebbinghaus.1885}}
+\label{fig:vgkurve}
+\end{figure}
+
+In Abbildung \ref{fig:wdh_kurve} ist ebenfalls die Vergessenskurve zu sehen. Jedoch wurden hier zusätzliche Wiederholungen des Lernstoffs in einem bestimmten zeitlichen Abstand durchgeführlt. Wie zu erkennen ist, wird die Kurve, welche die richtig wiedergegebenen Silben repräsentiert, mit häufigeren Wiederholungen immer flacher. Dies bedeutet, dass mit häufigeren Wiederholungen der Lernaufwand und der richtig wiedergegebene Inhalt stetig ansteigt und weniger gelerntes erneut vergessen wird. Häufige Wiederholungen ermöglichen somit einen besseren Zugang ins Langzeitgedächtnis.\cite[S. 4]{Gruber.2018}
+
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{content/wiederholung.png}
+\centering
+\caption{Kurve des Vergessens mit Wiederholungen nach \protect \cite{Ebbinghaus.1885}}
+\label{fig:wdh_kurve}
+\end{figure}

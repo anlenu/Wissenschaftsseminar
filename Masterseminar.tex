@@ -1,0 +1,129 @@
+\documentclass{fhwsjournale}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{subfigure}
+\usepackage{graphicx}
+
+\usepackage{lmodern}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage[hidelinks]{hyperref}
+%\usepackage{breakurl}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{nameref}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{siunitx}
+\usepackage{placeins}
+
+% for dummy text
+\usepackage{blindtext}
+
+%============ PAPERDATEN ================
+\title{Auswirkungen für das Lernen durch die Nutzung der Augmented-Reality Technologie}
+
+\fhwsYear{WS 2018}
+\newcommand{\university}{Hochschule für angewandte Wissenschaften Würzburg--Schweinfurt}
+\newcommand{\modulename}{FHWS -- Master: Informationssysteme, Modul: Wissenschaftsseminar} 
+\newcommand{\name}{Andreas Nüchter}
+
+% Kopfzeile
+\markboth{}{\modulename}
+% Hier steht der Text, der am Ende die Autordaten enthält.           
+\author{\name\\\modulename\\\university}
+%============ PAPERDATEN ================
+
+\sisetup{locale=DE}
+
+%============ MACROS ================
+\newcommand{\qq}[1]{\glqq #1\grqq{}}
+\newcommand{\fig}[1]{Abbildung~\ref{#1}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\tinsec}[1]{\SI{#1}{\second}}
+\newcommand{\expp}[1]{\exp \left( #1  \right)}
+%============ MACROS ================
+
+%============ ABSTRACT ================
+\begin{abstract} 
+
+
+
+\end{abstract}
+%============ ABSTRACT ================
+
+%============ CATEGEORY ================
+% WELCHE KATEGORIE HAT DAS PAPER?
+% ES GIBT:
+%		G = General
+%		H = Hardware
+%		IT= IT-Organisation
+%		S = Software
+%		IS= Information Systems
+%		Sub=Category is "free"
+\category{IS}{Information Systems}{} % TODO
+%============ CATEGEORY ================            
+
+%============ TERMS ================                      
+% HAUPT-KEYWORDS. HIER STEHEN EIN PAAR BUZZWORDS ZUR THEMATIK
+\terms{Augmented Reality, Gedächtnis, Lernmethoden} % TODO 
+%============ TERMS ================   
+
+%============ KEYWORDS ================   
+% HIER STEHEN ERWEITERTE KEYWORDS.                 
+\keywords{Loci-Methode, Wissensaneignung, Head-Mounted-Display, Microsoft Hololens} % TODO
+%============ KEYWORDS ================        
+
+\begin{document}
+
+%============ FOOTER ================  
+\begin{bottomstuff} 
+Autoren Adresse: Andreas Nüchter, Hochschule für angewandte Wissenschaften Würzburg--Schweinfurt, Deutschland, www.fhws.de
+\end{bottomstuff}
+%============ FOOTER ================  
+
+\maketitle
+
+%-------- KAPTIEL 1 --------------
+% HIER SOLLTE DIE EINLEITUNG/HINFÜHRUNG/PROBLEMERÖRTERUNG STEHEN
+\input{content/0_einleitung}
+%-------- KAPTIEL 1 --------------
+
+%-------- KAPTIEL 2 --------------
+% WELCHE ANDEREN ANSÄTZE WURDEN IN DER THEMATIK BEREITS DURCH ANDERE TEAMS ODER PERSONEN UNTERNOMMEN - WAS GIBT ES FÜR ALTERNATIVE ANSÄTZE.
+\input{content/1_grundlagen}
+\vspace{-0.5mm} % hack damit Haupteil nicht vor der ersten subsection umgebrochen wird
+%-------- KAPTIEL 2 --------------
+
+%-------- KAPTIEL 3 --------------
+% IN KAPITEL 3 SOLLTE MAN SICH MIT DEN MATERIALIEN UND METHODEN AUSEINANDERSETZEN - WIE HABE ICH MEINE LÖSUNG GEFUNDEN - WISSENSCHAFTLICHE METHODEN... 
+\input{content/2_methoden}
+%-------- KAPTIEL 3 --------------
+
+%-------- KAPTIEL 4 --------------
+% IN KAPTEL 4 SOLLTET IHR EURE LÖSUNG VORSTELLEN. QUASI DER HAUPTTEIL.
+\input{content/3_solution}
+%-------- KAPTIEL 4 --------------
+
+%-------- KAPTIEL 5 --------------
+% KAPITEL 5 BEHANDELT EINE ART EVALUATION. HIERBEI GILT ES EURE ARBEIT IN RELATION ZU SETZEN ZU ANDEREN ANSÄTZEN ODER GENERELL ZU EVALUIEREN. ES SOLLTE AUCH SEHR KRITISCH DISKUTIERT WERDEN.
+\input{content/4_evaluation}
+%-------- KAPTIEL 5 --------------
+
+%-------- KAPTIEL 6 --------------
+% KAPITEL 6 BILDET DEN SCHLUSS - HIER SOLL EIN FAZIT/SCHLUßFOLGERUNG/AUSBLICK BESCHRIEBEN WERDEN.
+\input{content/5_fazit}
+%-------- KAPTIEL 6 --------------
+
+\newpage
+\bibliography{fhwsbib}
+\bibliographystyle{fhwsjournale}
+
+% AKTUELL STEHT HIER NUR DER RECEIVED PART. DIESER BESCHREIBT BEI EINEM PAPER DEN ABSTAND ZWISCHEN ERSTEINREICHUNG AUF EINER KONFERENZ UND DEM MONAT/JAHR DER ANNAME => JE GERINGER DIESER ABSTAND UM SO AKTUELLER UND GGF. BESSER IST DAS PAPER
+\received{01/2019}{00/0000}{00/0000} 
+
+\end{document}
